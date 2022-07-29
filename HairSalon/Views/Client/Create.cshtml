@@ -9,13 +9,14 @@
 @using(Html.BeginForm())
 {
 <hr />
-@Html.LabelFor(model => model.Name)
+<p>
+@Html.LabelFor(model => model.Name, "Name: ")
 @Html.TextBoxFor(model => model.Name)
-
-@Html.LabelFor(model => model.Description)
+&ensp;
+@Html.LabelFor(model => model.Description, "Description of Services: ")
 @Html.TextBoxFor(model => model.Description)
-
-@Html.LabelFor(model => model.Stylist)
+&ensp;</p>
+@Html.LabelFor(model => model.Stylist, "Stylist: ")
 @Html.DropDownList("StylistId")
 <hr />
 <input type="submit" value="Add new Client" class="btn btn-primary" />
